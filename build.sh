@@ -30,6 +30,7 @@ cd ./apps
 for f in */; do
     if [ -d ${f} ]; then
         
+        echo "---------------------------------------------"
         echo "$f - Building"
 
         cd "$f/www"
