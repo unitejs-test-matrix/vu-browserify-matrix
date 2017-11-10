@@ -24,8 +24,6 @@ before_install:
   - npm link "unitejs-framework" "unitejs-cli-core" "unitejs-engine"
   - cd ../../
   - npm install -g gulp
-install:
-  - npm install
 script: 
   - chmod +x ./build.sh
   - chmod +x ./create-apps.sh

@@ -17,12 +17,6 @@ error_handler() {
   dump_output
   exit 1
 }
-kill_chrome() {
-  set +e
-  pkill chromedriver >> $BUILD_OUTPUT 2>&1
-  pkill chrome >> $BUILD_OUTPUT 2>&1
-  set -e
-}
 trap 'error_handler' ERR
 
 bash -c "while true; do echo ...; sleep $PING_SLEEP; done" &
@@ -55,12 +49,10 @@ for f in */; do
         gulp e2e-install --drivers=chrome >> $BUILD_OUTPUT 2>&1
         echo "$f - gulp e2e"
         gulp e2e >> $BUILD_OUTPUT 2>&1
-        kill_chrome
         echo "$f - gulp build --buildConfiguration=prod"
         gulp build --buildConfiguration=prod >> $BUILD_OUTPUT 2>&1
         echo "$f - gulp e2e"
         gulp e2e >> $BUILD_OUTPUT 2>&1
-        kill_chrome
         # echo "$f - gulp platform-electron-dev"
         # gulp platform-electron-dev >> $BUILD_OUTPUT 2>&1
         # echo "$f - gulp platform-web-package  --buildConfiguration=prod"
