@@ -56,11 +56,11 @@ for f in */; do
         gulp e2e >> $BUILD_OUTPUT 2>&1
         # echo "$f - gulp platform-electron-dev"
         # gulp platform-electron-dev >> $BUILD_OUTPUT 2>&1
-        # echo "$f - gulp platform-web-package  --buildConfiguration=prod"
+        # echo "$f - gulp platform-web-package --buildConfiguration=prod"
         # gulp platform-web-package --buildConfiguration=prod >> $BUILD_OUTPUT 2>&1
-        # echo "$f - gulp platform-electron-package  --buildConfiguration=prod"
+        # echo "$f - gulp platform-electron-package --buildConfiguration=prod"
         # gulp platform-electron-package --buildConfiguration=prod >> $BUILD_OUTPUT 2>&1
-        # echo "$f - gulp platform-docker-package  --buildConfiguration=prod"
+        # echo "$f - gulp platform-docker-package --buildConfiguration=prod"
         # gulp platform-docker-package --buildConfiguration=prod >> $BUILD_OUTPUT 2>&1
         cd ../../
 
