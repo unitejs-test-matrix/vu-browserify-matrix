@@ -54,6 +54,8 @@ for f in */; do
         gulp build --buildConfiguration=prod >> $BUILD_OUTPUT 2>&1
         echo "$f - gulp e2e"
         gulp e2e >> $BUILD_OUTPUT 2>&1
+        echo "$f - gulp doc-build"
+        gulp doc-build >> $BUILD_OUTPUT 2>&1
         # echo "$f - gulp platform-electron-dev"
         # gulp platform-electron-dev >> $BUILD_OUTPUT 2>&1
         # echo "$f - gulp platform-web-package --buildConfiguration=prod"
