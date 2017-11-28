@@ -35,15 +35,10 @@ for f in */; do
 
         cd "$f/www"
 
-        # echo "$f - Adding Platform"
-        # node ../../../unitejs/cli/bin/unite platform --operation=add --platformName=Electron >> $BUILD_OUTPUT 2>&1
-        # node ../../../unitejs/cli/bin/unite platform --operation=add --platformName=Docker >> $BUILD_OUTPUT 2>&1
         echo "$f - yarn"
         yarn >> $BUILD_OUTPUT 2>&1
         echo "$f - gulp build"
         gulp build >> $BUILD_OUTPUT 2>&1
-        # echo "$f - gulp theme-build"
-        # gulp theme-build >> $BUILD_OUTPUT 2>&1
         echo "$f - gulp unit"
         gulp unit >> $BUILD_OUTPUT 2>&1
         echo "$f - gulp e2e-install"
@@ -56,14 +51,6 @@ for f in */; do
         gulp e2e >> $BUILD_OUTPUT 2>&1
         echo "$f - gulp doc-build"
         gulp doc-build >> $BUILD_OUTPUT 2>&1
-        # echo "$f - gulp platform-electron-dev"
-        # gulp platform-electron-dev >> $BUILD_OUTPUT 2>&1
-        # echo "$f - gulp platform-web-package --buildConfiguration=prod"
-        # gulp platform-web-package --buildConfiguration=prod >> $BUILD_OUTPUT 2>&1
-        # echo "$f - gulp platform-electron-package --buildConfiguration=prod"
-        # gulp platform-electron-package --buildConfiguration=prod >> $BUILD_OUTPUT 2>&1
-        # echo "$f - gulp platform-docker-package --buildConfiguration=prod"
-        # gulp platform-docker-package --buildConfiguration=prod >> $BUILD_OUTPUT 2>&1
         cd ../../
 
         echo "$f - Removing"
