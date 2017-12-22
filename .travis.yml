@@ -3,7 +3,7 @@ sudo: required
 services:
   - docker
 node_js:
-  - "8"
+  - node
 before_install:
   - git clone --branch=$TRAVIS_BRANCH https://github.com/unitejs/framework.git unitejs/unitejs-framework
   - cd unitejs/unitejs-framework
