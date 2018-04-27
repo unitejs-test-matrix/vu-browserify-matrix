@@ -9,7 +9,7 @@ addons:
 services:
   - docker
 node_js:
-  - node
+  - 9
 before_install:
   - git clone --branch=$TRAVIS_BRANCH https://github.com/unitejs/framework.git unitejs/unitejs-framework
   - cd unitejs/unitejs-framework
