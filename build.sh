@@ -35,8 +35,6 @@ for f in */; do
 
         cd "$f/www"
 
-        echo "$f - yarn link unitejs-image-cli"
-        yarn link unitejs-image-cli >> $BUILD_OUTPUT 2>&1
         echo "$f - yarn"
         yarn >> $BUILD_OUTPUT 2>&1
         echo "$f - gulp build"
