@@ -31,7 +31,7 @@ for f in */; do
     if [ -d ${f} ]; then
         
         echo "---------------------------------------------"
-        echo "$f - Building"
+        echo "$f - Building..."
 
         cd "$f/www"
 
