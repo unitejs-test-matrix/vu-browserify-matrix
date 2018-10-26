@@ -9,7 +9,7 @@ addons:
 services:
   - docker
 node_js:
-  - 11
+  - 10
 before_install:
   - npm install -g gulp
   - git clone --branch=$TRAVIS_BRANCH https://github.com/unitejs/framework.git unitejs/unitejs-framework
